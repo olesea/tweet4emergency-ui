@@ -1,0 +1,20 @@
+
+
+.negative{
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+.positive {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.neutral {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+
+.card {
+    background-color: #606c76;
+    color: white;
+}

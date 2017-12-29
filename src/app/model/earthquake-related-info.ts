@@ -4,9 +4,9 @@ import { GeoLocation } from './geo-location';
 export interface EarthquakeRelatedInfo {
     content: string;
     owner: string;
-    date: Date;
+    date: string;
     tweetGeoLocation: GeoLocation;
     countryGeoLocation: GeoLocation;
-    geoLocationAccuracy: string;
     sentiment: string;
+    geoAccuracy: string;
 }

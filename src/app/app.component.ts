@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { StreamingService } from './streaming/streaming.service';
 import { EarthquakeRelatedInfo } from './model/earthquake-related-info';
+import { mockedData } from './mock';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,14 @@ import { EarthquakeRelatedInfo } from './model/earthquake-related-info';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  lat = 51.678418;
-  lng = 7.809007;
+  mapCentreLatitude = 45.9432;
+  mapCentreLongitude = 24.9668;
+
+
+  earthquakeTweets: EarthquakeRelatedInfo[] = [];
+
+  connectButtonLabel = 'Stream';
+
 
   constructor(private streamingService: StreamingService<EarthquakeRelatedInfo>) {
 
@@ -21,6 +27,12 @@ export class AppComponent {
       this.streamingService.connect('ws://localhost:8080/stream');
       console.log('Connected!');
       this.streamingService.stream()
-                         .subscribe(info => console.log(info.date));
+                           .subscribe(info => this.mapData(info));
   }
+
+  mapData(info: EarthquakeRelatedInfo): void {
+    // front insert, just to see the newest tweets
+    this.earthquakeTweets.unshift(info);
+  }
+
 }

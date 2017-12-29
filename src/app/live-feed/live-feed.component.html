@@ -1,3 +1,8 @@
-<p>
-  live-feed works!
-</p>
+<div *ngIf="tweetFeed && tweetFeed.length">
+        <div class="row" *ngFor="let tweet of tweetFeed">
+            <div class="column">
+                <app-earthquake-info [tweet]="tweet"></app-earthquake-info>
+                <hr class="separator">
+            </div>
+        </div>
+</div>

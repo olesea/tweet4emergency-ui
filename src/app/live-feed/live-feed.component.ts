@@ -9,7 +9,7 @@ import { EarthquakeRelatedInfo } from '../model/earthquake-related-info';
 export class LiveFeedComponent implements OnInit {
 
   @Input()
-  info: EarthquakeRelatedInfo[];
+  tweetFeed: EarthquakeRelatedInfo[];
 
   constructor() { }
 

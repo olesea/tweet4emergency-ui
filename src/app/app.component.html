@@ -3,21 +3,40 @@
 
     <div class="row">
         <div class="column">
-            <app-header></app-header>
+            <app-header [buttonLabel]="connectButtonLabel" (clicked)="connect()"></app-header>
         </div>
     </div>
 
     <div class="row">
 
-            <div class="column column-40">
-                <app-live-feed></app-live-feed>
+            <div class="column column-40 scroll">
+                <app-live-feed [tweetFeed]="earthquakeTweets"></app-live-feed>
             </div>
 
-            <div class="column column-60">
-                <agm-map [latitude]="lat" [longitude]="lng">
-                    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+            <div class="column column-60" >
+
+                <agm-map [latitude]="mapCentreLatitude" 
+                         [longitude]="mapCentreLongitude" 
+                         [streetViewControl]="false">
+
+                    <div *ngFor="let tweet of earthquakeTweets">
+                            <agm-marker  *ngIf="tweet.geoAccuracy === 'HIGH'"
+                                [latitude]="tweet.tweetGeoLocation.latitude"
+                                [longitude]="tweet.tweetGeoLocation.longitude">
+                            </agm-marker>
+
+                            <agm-circle *ngIf="tweet.geoAccuracy === 'MEDIUM' "
+                                [latitude]="tweet.countryGeoLocation.latitude"
+                                [longitude]="tweet.countryGeoLocation.longitude"
+                                [editable]="false"
+                                [radius]="10000"
+                                [circleDraggable]="false"
+                                [fillColor]="'red'">
+                            </agm-circle>
+                    </div>
                 </agm-map>
             </div>
             
     </div>
+
 </div>

@@ -18,4 +18,8 @@ export class StreamingService<T> {
       this.streamSource = this.websocketService.connect(url);
    }
 
+   disconnect(): void {
+     this.websocketService.close();
+   }
+
 }

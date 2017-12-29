@@ -1,3 +1,16 @@
 agm-map {
     height: 500px;
 }
+
+div.scroll {
+	height: 500px;
+	width: 100%;
+	overflow: auto;
+	background-color: #606c76;;
+	padding: 8px;
+
+}
+
+div.scroll::-webkit-scrollbar {
+    display: none;
+}
