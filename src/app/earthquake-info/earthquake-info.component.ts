@@ -11,14 +11,14 @@ export class EarthquakeInfoComponent implements OnInit {
   tweet: EarthquakeRelatedInfo;
 
   locationMessage: string;
-  sentiment: string;
+  certitudeCSS: string;
 
 
   constructor() { }
 
   ngOnInit() {
     this.locationMessage = this.findLocation();
-    this.sentiment = this.getSentiment();
+    this.certitudeCSS = this.getCertitudeCSSClass();
   }
 
   findLocation(): string {
@@ -34,11 +34,11 @@ export class EarthquakeInfoComponent implements OnInit {
     }
   }
 
-  getSentiment(): string {
-    if (this.tweet.sentiment === 'NEGATIVE' || this.tweet.sentiment === 'VERY_NEGATIVE') {
-        return 'column column-20 negative';
-    } else if (this.tweet.sentiment === 'POSITIVE' || this.tweet.sentiment === 'VERY_POSITIVE') {
-      return 'column column-20 positive';
+  getCertitudeCSSClass(): string {
+    if (this.tweet.certitude === 'POSITIVE') {
+        return 'column column-20 positive';
+    } else if (this.tweet.certitude === 'NEGATIVE') {
+      return 'column column-20 negative';
     } else {
       return 'column column-20 neutral';
     }

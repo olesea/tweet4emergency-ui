@@ -15,7 +15,7 @@ export const mockedData: EarthquakeRelatedInfo[] = [
             longitude: 10
         },
         geoAccuracy: 'HIGH',
-        sentiment: 'NEUTRAL'
+        certitude: 'NEUTRAL'
     },
     {
         content: 'RT @tarrrj: How do you arrest someone for an earthquake? https://t.co/Or9w0itR3a',
@@ -30,7 +30,7 @@ export const mockedData: EarthquakeRelatedInfo[] = [
             longitude: 10
         },
         geoAccuracy: 'HIGH',
-        sentiment: 'NEGATIVE'
+        certitude: 'NEGATIVE'
     },
     {
         content: '#earthquake  M 1.6 - 63km E of Cantwell, Alaska https://t.co/Kivdcyl4Yp"',
@@ -45,7 +45,7 @@ export const mockedData: EarthquakeRelatedInfo[] = [
             longitude: 10
         },
         geoAccuracy: 'HIGH',
-        sentiment: 'NEGATIVE'
+        certitude: 'NEGATIVE'
     },
     {
         content: 'RT @tarrrj: How do you arrest someone for an earthquake? https://t.co/Or9w0itR3a',
@@ -60,7 +60,7 @@ export const mockedData: EarthquakeRelatedInfo[] = [
             longitude: 10
         },
         geoAccuracy: 'HIGH',
-        sentiment: 'NEGATIVE'
+        certitude: 'NEGATIVE'
     },
     {
         content: '#earthquake  M 1.6 - 63km E of Cantwell, Alaska https://t.co/Kivdcyl4Yp"',
@@ -75,7 +75,7 @@ export const mockedData: EarthquakeRelatedInfo[] = [
             longitude: 10
         },
         geoAccuracy: 'HIGH',
-        sentiment: 'NEGATIVE'
+        certitude: 'NEGATIVE'
     },
     {
         content: 'RT @tarrrj: How do you arrest someone for an earthquake? https://t.co/Or9w0itR3a',
@@ -90,7 +90,7 @@ export const mockedData: EarthquakeRelatedInfo[] = [
             longitude: 10
         },
         geoAccuracy: 'HIGH',
-        sentiment: 'NEGATIVE'
+        certitude: 'NEGATIVE'
     },
     {
         content: '#earthquake  M 1.6 - 63km E of Cantwell, Alaska https://t.co/Kivdcyl4Yp"',
@@ -105,7 +105,7 @@ export const mockedData: EarthquakeRelatedInfo[] = [
             longitude: 10
         },
         geoAccuracy: 'HIGH',
-        sentiment: 'NEGATIVE'
+        certitude: 'NEGATIVE'
     }
 ];
 

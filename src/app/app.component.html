@@ -25,7 +25,7 @@
                                 [longitude]="tweet.tweetGeoLocation.longitude">
                             </agm-marker>
 
-                            <agm-circle *ngIf="tweet.geoAccuracy === 'MEDIUM' "
+                            <agm-circle *ngIf="tweet.geoAccuracy === 'MEDIUM' || tweet.geoAccuracy === 'HIGH'"
                                 [latitude]="tweet.countryGeoLocation.latitude"
                                 [longitude]="tweet.countryGeoLocation.longitude"
                                 [editable]="false"

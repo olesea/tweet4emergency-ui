@@ -7,6 +7,6 @@ export interface EarthquakeRelatedInfo {
     date: string;
     tweetGeoLocation: GeoLocation;
     countryGeoLocation: GeoLocation;
-    sentiment: string;
+    certitude: string;
     geoAccuracy: string;
 }
