@@ -12,7 +12,7 @@ import { mockedData } from './mock';
 export class AppComponent {
   mapCentreLatitude = 45.9432;
   mapCentreLongitude = 24.9668;
-
+  mouseOnMarker: boolean;
 
   earthquakeTweets: EarthquakeRelatedInfo[] = [];
 
@@ -31,8 +31,15 @@ export class AppComponent {
   }
 
   mapData(info: EarthquakeRelatedInfo): void {
-    // front insert, just to see the newest tweets
     this.earthquakeTweets.unshift(info);
+  }
+
+  openInfo(): void {
+    this.mouseOnMarker = true;
+  }
+
+  closeInfo(): void {
+    this.mouseOnMarker = false;
   }
 
 }

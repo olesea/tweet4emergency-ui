@@ -20,10 +20,18 @@
                          [streetViewControl]="false">
 
                     <div *ngFor="let tweet of earthquakeTweets">
+
                             <agm-marker  *ngIf="tweet.geoAccuracy === 'HIGH'"
                                 [latitude]="tweet.tweetGeoLocation.latitude"
-                                [longitude]="tweet.tweetGeoLocation.longitude">
+                                [longitude]="tweet.tweetGeoLocation.longitude"
+                                [openInfoWindow]="false"
+                                (mouseOver)="infoWindow.open()"
+                                (mouseOut)="infoWindow.close()">
+                                <agm-info-window #infoWindow [maxWidth]="300">
+                                        <app-earthquake-info [tweet]="tweet"></app-earthquake-info>
+                                </agm-info-window>
                             </agm-marker>
+                            
 
                             <agm-circle *ngIf="tweet.geoAccuracy === 'MEDIUM' || tweet.geoAccuracy === 'HIGH'"
                                 [latitude]="tweet.countryGeoLocation.latitude"
