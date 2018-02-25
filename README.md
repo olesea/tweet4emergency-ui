@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   - Filtered twitter feed that shows all the tweets that contains earthquake related keywords
   
 ## Screenshot
+![UI](https://raw.githubusercontent.com/calinchiper/tweet4emergency-ui/master/screenshot.PNG)
+
   
 ## Development server
 
