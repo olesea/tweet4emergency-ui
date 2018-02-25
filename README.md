@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
 
+## Features
+  - Marking affected zones on map by earthquakes using GPS information extracted from Twitter
+  - Earthquake related tweet
+  - Filtered twitter feed that shows all the tweets that contains earthquake related keywords
+  
+## Screenshot
+  
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
